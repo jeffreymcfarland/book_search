@@ -4,9 +4,13 @@ const axios = require("axios");
 module.exports = (app) => {
 
     // Routes for google api
-    app.get('/api/google/', (req, res) => {
+    app.get('/api/google', (req, res) => {
         axios
-        .get("https://www.googleapis.com/books/v1/volumes", {params: req.query})
+        .get("https://www.googleapis.com/books/v1/volumes", {
+            params: {
+                q: req.body.q,
+                key: process.env.API_KEY
+            }})
         .then((results) => 
             results.data.items.filter( result =>
                 result.volumeInfo.title &&
