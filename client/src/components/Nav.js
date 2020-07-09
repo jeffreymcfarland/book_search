@@ -13,7 +13,6 @@ function Nav() {
     return(
         <nav className='navbar navbar-expand-md navbar-light bg-light'>
             <Link className='navbar-brand' to='/'>
-                {/* <img src={bookImg} width='35' height='35' className='d-inline-block align-top' alt='logo' loading='lazy'/> */}
                 <span>    ________ <img src={searchImg} width='20' height='20' alt='search icon'/>  Book Search</span>
             </Link>
             <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>

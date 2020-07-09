@@ -1,9 +1,10 @@
 import React from 'react';
+import Jumbotron from '../components/Jumbotron';
 
 function Search() {
     return(
         <div>
-            <h1>Search for Books</h1>
+            <Jumbotron />
         </div>
     )
 }
