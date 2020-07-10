@@ -8,7 +8,7 @@ module.exports = (app) => {
         axios
         .get("https://www.googleapis.com/books/v1/volumes", {
             params: {
-                q: req.body.q,
+                q: req.query,
                 key: process.env.API_KEY
             }})
         .then((results) => 

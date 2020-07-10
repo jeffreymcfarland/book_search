@@ -1,12 +1,10 @@
 import React from 'react';
-import Form from './Form';
 
-function Card() {
+function Card({ children, mt4 }) {
     return(
-        <div className='card'>
+        <div className={`card ${mt4 ? 'mt-4' : ''}`}>
             <div className='card-body'>
-                <h3>Book Search</h3>
-                <Form />
+                {children}
             </div>
         </div>
     )

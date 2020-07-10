@@ -3,6 +3,7 @@ import React from 'react';
 function Form(props) {
     return(
         <div>
+            <h3>Book Search</h3>
         <form>
             <div className='form-group'>
                 <label htmlFor='Query'>Book</label>
