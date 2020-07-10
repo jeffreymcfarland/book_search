@@ -18,13 +18,17 @@ function Search() {
         API.getBooksAPI(q)
       .then(res => setBooks(res.data))
       .catch(() =>
-        setBooks([]) ||
-        setMSG('No books found with that title, try a different title!')
+        errSet()
       )
     };
 
+    const errSet = () => {
+        setBooks([]);
+        setMSG('No books found with that title, try a different title!');
+    }
+
     const handleInput = (e) => {
-        const { name, value } = e.target;
+        const { value } = e.target;
         setQ(value);
     };
 
@@ -64,6 +68,7 @@ function Search() {
                                     authors={book.volumeInfo.authors.join(', ')}
                                     description={book.volumeInfo.description}
                                     image={book.volumeInfo.imageLinks.thumbnail}
+                                    link={book.volumeInfo.infoLink}
                                     handleSave={handleSave}
                                     />
                                 </Card>

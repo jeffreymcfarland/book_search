@@ -1,16 +1,13 @@
 import React from 'react';
-import { Container, Row, Col } from './Grid/index';
+import { Row, Col } from './Grid/index';
 
 function BookList(props) {
     return(
         <div>
                 <Row fluid>
-                    <Col size='md-8'>
+                    <Col size='md-12'>
                         <h3>{props.title}</h3>
                         {props.subtitle ? (<h5>{props.subtitle}</h5>) : <h5>---------</h5>}
-                    </Col>
-                    <Col size='md-4'>
-                        
                     </Col>
                 </Row>
                 <Row fluid>
@@ -24,7 +21,7 @@ function BookList(props) {
                     </Col>
                     <Col size='12 md-9 sm-4'>
                         <p>{props.description}</p>
-                        <a className='btn btn-primary text-white' target='_blank' rel='reopener noreferrer' href={props.link}>
+                        <a className='btn btn-primary text-white' target='_blank' rel='noopener noreferrer' href={props.link}>
                             View
                         </a>
                     </Col>
