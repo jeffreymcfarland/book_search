@@ -17,7 +17,7 @@ function Search() {
     const getBookList = (q) => {
         API.getBooksAPI(q)
       .then(res => setBooks(res.data))
-      .catch(() =>
+      .catch((err) =>
         errSet()
       )
     };
@@ -25,7 +25,7 @@ function Search() {
     const errSet = () => {
         setBooks([]);
         setMSG('No books found with that title, try a different title!');
-    }
+    };
 
     const handleInput = (e) => {
         const { value } = e.target;
@@ -38,7 +38,18 @@ function Search() {
     };
 
     const handleSave = (id) => {
+        const savedBook = books.find(book => book.id === id);
 
+        API.saveBookDB({
+        title: savedBook.volumeInfo.title,
+        subtitle: savedBook.volumeInfo.subtitle,
+        authors: savedBook.volumeInfo.authors,
+        link: savedBook.volumeInfo.infoLink,
+        description: savedBook.volumeInfo.description,
+        image: savedBook.volumeInfo.imageLinks.thumbnail,
+        googleId: savedBook.id
+        })
+        .then(() => getBookList());
     };
 
     return(
@@ -69,7 +80,14 @@ function Search() {
                                     description={book.volumeInfo.description}
                                     image={book.volumeInfo.imageLinks.thumbnail}
                                     link={book.volumeInfo.infoLink}
-                                    handleSave={handleSave}
+                                    Button={() => (
+                                        <button
+                                          onClick={() => handleSave(book.id)}
+                                          className="btn btn-primary ml-2"
+                                        >
+                                          Save
+                                        </button>
+                                      )}
                                     />
                                 </Card>
                             ))}

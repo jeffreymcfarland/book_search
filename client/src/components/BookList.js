@@ -24,6 +24,7 @@ function BookList(props) {
                         <a className='btn btn-primary text-white' target='_blank' rel='noopener noreferrer' href={props.link}>
                             View
                         </a>
+                        <props.Button />
                     </Col>
                 </Row>
         </div>
