@@ -53,7 +53,7 @@ function Saved() {
                             ))}
                         </ul>
                         ) : (
-                            <h1 className='text-center'>Save some books to your list!</h1>
+                            <h1 className='text-center mt-4'>Save some books to your list!</h1>
                         )}          
                 </Row>
             </Container>
