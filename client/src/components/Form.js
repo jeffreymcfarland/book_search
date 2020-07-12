@@ -14,10 +14,9 @@ function Form(props) {
                 value={props.q}
                 name='q'
                 onChange={props.handleInput}
-                placeholder='Harry Potter'
+                placeholder='Star Wars'
                 required
                 />
-                {/* <small id='emailHelp' className='form-text text-muted'>We'll never share your email with anyone else.</small> */}
             </div>
             <button
             type='submit'
