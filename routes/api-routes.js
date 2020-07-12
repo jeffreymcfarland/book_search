@@ -1,12 +1,12 @@
 const db = require('../models');
-const axios = require("axios");
+const axios = require('axios');
 
 module.exports = (app) => {
 
     // Routes for google api
     app.get('/api/google', (req, res) => {
         axios
-        .get("https://www.googleapis.com/books/v1/volumes", {
+        .get('https://www.googleapis.com/books/v1/volumes', {
             params: {
                 q: req.query,
                 key: process.env.API_KEY

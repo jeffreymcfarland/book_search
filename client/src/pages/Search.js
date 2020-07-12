@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Jumbotron from '../components/Jumbotron';
-import { Container, Row, Col } from '../components/Grid/index';
+import { Container, Row } from '../components/Grid/index';
 import Card from '../components/Card';
 import Form from '../components/Form';
 import BookList from '../components/BookList';
@@ -17,7 +17,7 @@ function Search() {
     const getBookList = (q) => {
         API.getBooksAPI(q)
       .then(res => setBooks(res.data))
-      .catch((err) =>
+      .catch(() =>
         errSet()
       )
     };
@@ -25,16 +25,6 @@ function Search() {
     const errSet = () => {
         setBooks([]);
         setMSG('No books found with that title, try a different title!');
-    };
-
-    const handleInput = (e) => {
-        const { value } = e.target;
-        setQ(value);
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        getBookList(q)
     };
 
     const handleSave = (id) => {
@@ -50,6 +40,16 @@ function Search() {
         googleId: savedBook.id
         })
         .then(() => getBookList());
+    };
+
+    const handleInput = (e) => {
+        const { value } = e.target;
+        setQ(value);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        getBookList(q)
     };
 
     return(
@@ -69,7 +69,7 @@ function Search() {
                 </Row>
                 <Row fluid mt4>
                     {books.length ? (
-                        <ul className="list-group">
+                        <ul className='list-group'>
                             {books.map(book => (
                                 <Card mt4>
                                     <BookList
@@ -83,7 +83,7 @@ function Search() {
                                     Button={() => (
                                         <button
                                           onClick={() => handleSave(book.id)}
-                                          className="btn btn-primary ml-2"
+                                          className='btn btn-primary ml-2'
                                         >
                                           Save
                                         </button>

@@ -3,6 +3,7 @@ import { Container, Row } from '../components/Grid/index';
 import Card from '../components/Card';
 import SavedList from '../components/SavedList';
 import API from '../utils/API';
+import Jumbrotron from '../components/Jumbotron';
 
 function Saved() {
     const [books, setBooks] = useState({
@@ -15,8 +16,8 @@ function Saved() {
 
     const getSavedList = () => {
         API.getSavedBookDB()
-          .then(res => setBooks(res.data))
-          .catch(err => console.log(err));
+            .then(res => setBooks(res.data))
+            .catch(err => console.log(err));
     };
 
     const handleDelete = id => {
@@ -27,9 +28,10 @@ function Saved() {
     return(
         <div>
             <Container fluid>
+                <Jumbrotron />
                 <Row fluid>
                 {books.length ? (
-                        <ul className="list-group">
+                        <ul className='list-group'>
                             {books.map(book => (
                                 <Card mt4>
                                     <SavedList
@@ -43,7 +45,7 @@ function Saved() {
                                     Button={() => (
                                         <button
                                           onClick={() => handleDelete(book._id)}
-                                          className="btn btn-danger text-white ml-3"
+                                          className='btn btn-danger text-white ml-3'
                                         >
                                           Delete
                                         </button>
