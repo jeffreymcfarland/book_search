@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import searchImg from '../images/search.png';
+import searchImg from '../../images/search.png';
+import './Nav.css';
 
 function Nav() {
 
@@ -17,9 +18,9 @@ function Nav() {
     };
 
     return(
-        <nav className='navbar navbar-expand-md navbar-light bg-light'>
+        <nav className='navbar navbar-expand-md bg-light'>
             <Link className='navbar-brand' to='/'>
-                <span>    ________ <img src={searchImg} width='20' height='20' alt='search icon'/>  Book Search</span>
+                <span><img src={searchImg} width='20' height='20' alt='search icon'/>  Book Search</span>
             </Link>
             <button
             className='navbar-toggler'

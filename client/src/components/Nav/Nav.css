@@ -1,0 +1,12 @@
+a {
+    color: #b3a6f5;
+}
+
+a:hover {
+    color: #3a0f88;
+    font-style: italic;
+}
+
+.active {
+    color: #3a0f88;
+}
