@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Jumbotron from '../components/Jumbotron';
+import Jumbotron from '../components/Jumbotron/Jumbotron';
 import { Container, Row } from '../components/Grid/index';
 import Card from '../components/Card';
 import Form from '../components/Form';
@@ -15,6 +15,7 @@ function Search() {
     const [msg, setMSG] = useState('Search for a book on Google Books!')
 
     const getBookList = (q) => {
+        console.log(q)
         API.getBooksAPI(q)
       .then(res => setBooks(res.data))
       .catch(() =>
@@ -39,7 +40,7 @@ function Search() {
         image: savedBook.volumeInfo.imageLinks.thumbnail,
         googleId: savedBook.id
         })
-        .then(() => getBookList());
+        .then(() => getBookList(q));
     };
 
     const handleInput = (e) => {
@@ -71,7 +72,10 @@ function Search() {
                     {books.length ? (
                         <ul className='list-group'>
                             {books.map(book => (
-                                <Card mt4>
+                                <Card 
+                                mt4
+                                key={book.id}
+                                >
                                     <BookList
                                     key={book.id}
                                     title={book.volumeInfo.title}

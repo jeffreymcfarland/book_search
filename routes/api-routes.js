@@ -26,7 +26,7 @@ module.exports = (app) => {
                 dbBooks.every(dbBook => dbBook.googleId.toString() !== apiBook.id)
         )))
         .then(books => res.json(books))
-        .catch((err) => console.log(err))
+        .catch((err) => res.status(422).json(err))
     });
 
     app.get('/api/books', (req, res) => {

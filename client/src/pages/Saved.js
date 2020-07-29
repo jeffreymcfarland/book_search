@@ -3,7 +3,7 @@ import { Container, Row } from '../components/Grid/index';
 import Card from '../components/Card';
 import SavedList from '../components/SavedList';
 import API from '../utils/API';
-import Jumbrotron from '../components/Jumbotron';
+import Jumbrotron from '../components/Jumbotron/Jumbotron';
 
 function Saved() {
     const [books, setBooks] = useState({
