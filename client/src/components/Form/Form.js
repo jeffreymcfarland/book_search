@@ -4,10 +4,9 @@ import './Form.css';
 function Form(props) {
     return(
         <div className='mx-5'>
-                <h3>Book Search</h3>
+                <h3 className='formTitle'>Book Search</h3>
             <form>
                 <div className='form-group'>
-                    <label htmlFor='Query'>Book</label>
                     <input
                     type='text'
                     className='form-control'
@@ -15,7 +14,7 @@ function Form(props) {
                     value={props.q}
                     name='q'
                     onChange={props.handleInput}
-                    placeholder='Star Wars'
+                    placeholder='e.g. Star Wars'
                     required
                     />
                 </div>

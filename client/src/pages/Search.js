@@ -5,6 +5,7 @@ import Card from '../components/Card/Card';
 import Form from '../components/Form/Form';
 import BookList from '../components/BookList';
 import API from '../utils/API';
+import './PageStyles/PageStyles.css';
 
 function Search() {
     
@@ -74,7 +75,7 @@ function Search() {
                 </Row>
                 <Row fluid mt4>
                     {books.length ? (
-                        <ul className='list-group'>
+                        <ul className='list-group mx-5'>
                             {books.map(book => (
                                 <Card 
                                 mt4
@@ -101,7 +102,7 @@ function Search() {
                             ))}
                         </ul>
                         ) : (
-                            <h1 className='text-center mb-3 mt-5'>{msg}</h1>
+                            <h1 className='text-center mb-3 mt-5 msg'>{msg}</h1>
                         )}                 
                 </Row>
             </Container>
