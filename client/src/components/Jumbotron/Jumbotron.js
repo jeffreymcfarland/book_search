@@ -7,7 +7,7 @@ function Jumbotron() {
       <div className="jumbotron text-center">
         <div className="container">
           <h1 className="display-4">Google Books Search</h1>
-          <p className="lead">A React app where you can search for google books and save any book to your saved list.</p>
+          <p className="lead">A React app where you can search for google books and save them to your list for later.</p>
         </div>
       </div>
     

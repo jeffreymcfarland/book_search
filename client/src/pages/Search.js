@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Jumbotron from '../components/Jumbotron/Jumbotron';
-import { Container, Row } from '../components/Grid/index';
-import Card from '../components/Card';
-import Form from '../components/Form';
+import { Container, Row, Col } from '../components/Grid/index';
+import Card from '../components/Card/Card';
+import Form from '../components/Form/Form';
 import BookList from '../components/BookList';
 import API from '../utils/API';
 
@@ -60,13 +60,17 @@ function Search() {
                     <Jumbotron />
                 </Row>
                 <Row fluid>
-                    <Card>
-                        <Form
-                        q={q}
-                        handleInput={handleInput}
-                        handleSubmit={handleSubmit}
-                         />
-                    </Card>
+                    <div className='d-flex justify-content-center'>
+                    <Col size='lg-6'>
+                        <Card>
+                            <Form
+                            q={q}
+                            handleInput={handleInput}
+                            handleSubmit={handleSubmit}
+                            />
+                        </Card>
+                    </Col>
+                    </div>
                 </Row>
                 <Row fluid mt4>
                     {books.length ? (
@@ -97,7 +101,7 @@ function Search() {
                             ))}
                         </ul>
                         ) : (
-                            <h1 className='text-center'>{msg}</h1>
+                            <h1 className='text-center mb-3 mt-5'>{msg}</h1>
                         )}                 
                 </Row>
             </Container>

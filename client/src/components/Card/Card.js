@@ -1,4 +1,5 @@
 import React from 'react';
+import './Card.css';
 
 function Card({ children, mt4 }) {
     return(

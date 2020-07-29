@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row } from '../components/Grid/index';
-import Card from '../components/Card';
+import Card from '../components/Card/Card';
 import SavedList from '../components/SavedList';
 import API from '../utils/API';
 import Jumbrotron from '../components/Jumbotron/Jumbotron';
