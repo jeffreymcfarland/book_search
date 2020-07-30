@@ -34,7 +34,10 @@ function Saved() {
                 {books.length ? (
                         <ul className='list-group mx-5 mb-4 animate__animated animate__fadeInUp'>
                             {books.map(book => (
-                                <Card mt4>
+                                <Card
+                                mt4
+                                key={book.id}
+                                >
                                     <SavedList
                                     key={book._id}
                                     title={book.title}

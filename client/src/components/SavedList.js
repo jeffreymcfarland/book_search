@@ -5,21 +5,23 @@ function SavedList(props) {
     return(
         <div>
             <Row>
-                <div className='col-md-8 col-sm-10'>
-                    <h3>{props.title}</h3>
-                    {props.subtitle ? (<h5>{props.subtitle}</h5>) : <br></br>}
-                </div>
-                <div className='col-md-4 col-sm-2'>
+                <div className='col-md-4 col-sm-12 order-md-last mb-2'>
                     <props.Button />
-                    <a className='resultsBtn text-white float-right' target='_blank' rel='noopener noreferrer' href={props.link}>
-                        View
-                    </a>
+                    <a className='resultsBtn text-white float-right' target='_blank' rel='noopener noreferrer' href={props.link}>View</a>
                 </div>
-            </Row>
-            <Row fluid>
-                <Col size='md-12'>
-                    <p>Writted by {props.authors}</p>
-                </Col>
+                <div className='col-md-8 col-sm-12'>
+                    <Row>
+                        <div className='col-md-12'>
+                            <h4>{props.title}</h4>
+                            {props.subtitle ? (<h6>{props.subtitle}</h6>) : <br></br>}
+                        </div>
+                    </Row>
+                    <Row>
+                        <Col size='md-12'>
+                            <p>Writted by {props.authors}</p>
+                        </Col>
+                    </Row>
+                </div>
             </Row>
             <div className='info'>
             <Row>

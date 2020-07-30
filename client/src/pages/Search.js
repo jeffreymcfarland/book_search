@@ -92,7 +92,7 @@ function Search() {
                                     Button={() => (
                                         <button
                                           onClick={() => handleSave(book.id)}
-                                          className='resultsBtn mr-2 float-right'
+                                          className='resultsBtn ml-3 float-right'
                                         >
                                           Save
                                         </button>
