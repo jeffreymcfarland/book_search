@@ -1,18 +1,12 @@
-body {
-    background-color: #65527e;
+.info {
+    max-width: 100%;
+    height: 225px;
+    overflow: auto;
 }
 
-.msg {
-    color: #ffffff;
-}
-
-.animate__animated.animate__fadeInUp {
-    --animate-duration: 1s;
-}
-
-.deleteBtn {
+.resultsBtn {
     font-size: 20px;
-    background-color: #e4837f;
+    background-color: #580f88;
     color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -21,13 +15,13 @@ body {
     transition: ease 1s;
 }
 
-.deleteBtn:hover {
-    background-color: #c03d39;
+.resultsBtn:hover {
+    background-color: #b3a6f5;
     transition: ease 1s;
     text-decoration: none;
     font-style: normal;
 }
 
-.deleteBtn:focus {
+.resultsBtn:focus {
     outline: none;
 }

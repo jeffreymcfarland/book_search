@@ -4,6 +4,7 @@ import Card from '../components/Card/Card';
 import SavedList from '../components/SavedList';
 import API from '../utils/API';
 import Jumbrotron from '../components/Jumbotron/Jumbotron';
+import './PageStyles/PageStyles.css';
 
 function Saved() {
     const [books, setBooks] = useState({
@@ -31,7 +32,7 @@ function Saved() {
                 <Jumbrotron />
                 <Row fluid>
                 {books.length ? (
-                        <ul className='list-group'>
+                        <ul className='list-group mx-5 mb-4 animate__animated animate__fadeInUp'>
                             {books.map(book => (
                                 <Card mt4>
                                     <SavedList
@@ -45,7 +46,7 @@ function Saved() {
                                     Button={() => (
                                         <button
                                           onClick={() => handleDelete(book._id)}
-                                          className='btn btn-danger text-white ml-3'
+                                          className='deleteBtn text-white ml-3 float-right'
                                         >
                                           Delete
                                         </button>

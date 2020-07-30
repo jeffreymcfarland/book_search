@@ -3,7 +3,7 @@ import Jumbotron from '../components/Jumbotron/Jumbotron';
 import { Container, Row, Col } from '../components/Grid/index';
 import Card from '../components/Card/Card';
 import Form from '../components/Form/Form';
-import BookList from '../components/BookList';
+import BookList from '../components/BookList/BookList';
 import API from '../utils/API';
 import './PageStyles/PageStyles.css';
 
@@ -61,21 +61,21 @@ function Search() {
                     <Jumbotron />
                 </Row>
                 <Row fluid>
-                    <div className='d-flex justify-content-center'>
-                    <Col size='lg-6'>
-                        <Card>
-                            <Form
-                            q={q}
-                            handleInput={handleInput}
-                            handleSubmit={handleSubmit}
-                            />
-                        </Card>
-                    </Col>
+                    <div className='d-flex justify-content-center animate__animated animate__fadeInUp'>
+                        <Col size='lg-6'>
+                            <Card>
+                                <Form
+                                q={q}
+                                handleInput={handleInput}
+                                handleSubmit={handleSubmit}
+                                />
+                            </Card>
+                        </Col>
                     </div>
                 </Row>
                 <Row fluid mt4>
                     {books.length ? (
-                        <ul className='list-group mx-5'>
+                        <ul className='list-group mx-5 mb-4 animate__animated animate__fadeInUp'>
                             {books.map(book => (
                                 <Card 
                                 mt4
@@ -92,7 +92,7 @@ function Search() {
                                     Button={() => (
                                         <button
                                           onClick={() => handleSave(book.id)}
-                                          className='btn btn-primary ml-2'
+                                          className='resultsBtn mr-2 float-right'
                                         >
                                           Save
                                         </button>
