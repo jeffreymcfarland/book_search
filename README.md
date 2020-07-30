@@ -2,7 +2,11 @@
 
 ## About 📚 
 
-Built with React front end and Node/Express back end, this app makes easy use of the google books api. A user can search for any google book title and either click the link to the book or save the book to a list for easy access later. Once on the save list, a user can click to view the book or delete the book from the saved list.
+Built with React front end and Node/Express back end, this app makes easy use of the google books api. 
+
+A user can search for any google book and either click the link to the book or save the book to a list for easy access later. 
+
+Once on the saved list, a user can click to view the book or delete the book from the saved list.
 
 ***
 ## Table of Contents
@@ -38,6 +42,7 @@ Built with React front end and Node/Express back end, this app makes easy use of
 * BootStrap
 * MongoDB
 * Mongoose
+* Animate.css
 * Heroku
 
 ***
