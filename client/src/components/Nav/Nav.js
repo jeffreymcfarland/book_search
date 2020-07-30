@@ -23,7 +23,7 @@ function Nav() {
                 <span><img src={searchImg} width='20' height='20' alt='search icon'/>  Book Search</span>
             </Link>
             <button
-            className='navbar-toggler'
+            className='navbar-toggler navbar-light'
             type='button'
             data-toggle='collapse'
             data-target='#navbarNav'

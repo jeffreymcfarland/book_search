@@ -75,7 +75,7 @@ function Search() {
                 </Row>
                 <Row fluid mt4>
                     {books.length ? (
-                        <ul className='list-group mx-5 mb-4 animate__animated animate__fadeInUp'>
+                        <ul className='list-group mx-md-5 mx-sm-2 mb-4 animate__animated animate__fadeInUp'>
                             {books.map(book => (
                                 <Card 
                                 mt4
